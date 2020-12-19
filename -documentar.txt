@@ -1,0 +1,75 @@
+fecha de inicio 24/09/15
+-documentar
+DB usuario / tabla nombres login
+DB clientes / tabla cliente
+
+CAMPOS 
+-nombre   apellido   concepto    precio  fecha.
+varchar     varchar  varchar    int      varchar
+
+VARIABLES welcome "id"
+nombre,apellido,concepto, precio y datepicker
+
+PROCESO
+-registro, elimnar y modificar
+-busqueda de cliente.
+
+NOTA.-
+ver si con una funcion ajax mande a llamar a pagina php
+
+
+_________________________________________________________________________
+<link rel="stylesheet"  href="css/jquery-ui.css">  ***REGISTRAR********
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+		!window.jQuery && document.write("<script src='js/jquery.min.js'><\/script>");
+</script>
+<script src="js/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+  </script>
+</head>
+<body>
+<div class="contenido">
+	<p class="wusuario">Usuario conectado : <b><?php echo $_SESSION['usuario']; ?></b></p>
+	<p class="cerrar"><a href="logout.php">CERRAR SESIÓN</a></p>
+	 <form onsubmit="return false" action="return false">
+	 <div id="resultadow"></div>
+	 	<table id="clientes" >
+	 	<h2>Clientes</h2>
+	 	<tr><td>Nombre:</td><td><input type="text" id="nombre"  /></td></tr>
+	 	<tr><td>Apellido:</td><td><input type="text" id="apellido"/></td></tr>
+	 	<tr><td>Concepto:</td><td><textarea id="concepto"placeholder="Concepto..."></textarea></td></tr>
+	 	<tr><td>Precio:$</td><td><input type="text" id="precio"/></td></tr>
+	 	<tr><td>Fecha</td><td><input type="text" id="datepicker"/></td></tr>
+	 	<tr><td></td></td><td><input type="button" id="#" value="Registrar" onclick="Registrar();" /></td><td></td></tr>
+	 	</table>
+	 </form>
+	 
+	 
+</div>
+____________________________________________________________
+<script>
+$(document).ready(function() { <!--aqui es cuando entra la pagina y debe estar en ella sin mandar llamar desde otro archivo el js -->
+   $('#registrar').click(function(){
+      $.ajax({
+	    type: "POST",
+	    url: "formregistrar.php",
+	    success: function(a) {
+                $('#resultado').html(a);
+	    }
+       });
+   });
+});
+</script>
+
+
+lo puedes manipular con JS, debes regresar un archivo en formato JSON y paresearlo..
+
+Busca php encode y decode
+
+En jquery busca parse json

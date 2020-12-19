@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8"/>
+<link rel="stylesheet"  href="css/jquery-ui.css">  
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.structure.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui.theme.css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script>
+		!window.jQuery && document.write("<script src='js/jquery.min.js'><\/script>");
+</script>
+<script src="js/jquery-ui.js"></script>
+<script>
+  $(function() {
+    $( "#datepicker" ).datepicker();
+  });
+</script>
+ 
+<script src="js/ajax.js"></script>
+</head>
+<body>
+	<div class="contenido">
+	 
+	
+	 	<form onsubmit="return false" action="return false">
+	 		<table id="clientes" >
+	 			<tr><td></td><td><input type="hidden" id="id" /></td></tr>
+	 			<tr><td>Nombre:</td><td><input type="text" id="nombre"  /></td></tr>
+	 			<tr><td>Apellido:</td><td><input type="text" id="apellido"/></td></tr>
+	 			<tr><td>Concepto:</td><td><textarea id="concepto"placeholder="Concepto..."></textarea></td></tr>
+	 			<tr><td>Precio:$</td><td><input type="text" id="precio"/></td></tr>
+	 			<tr><td>Fecha</td><td><input type="text" id="datepicker"/></td></tr>
+	 			<tr><td></td></td><td><input type="button"  value="Guardar" onclick="Registrar();"/></td><td></td></tr>
+	 		</table>
+	    </form>
+	 
+	 
+</div>
+  
+ 
+</body>

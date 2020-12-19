@@ -1,0 +1,82 @@
+body {
+	font-size:18px;
+	margin:0em auto;
+
+}
+button {
+	border-radius:5px;
+	padding:8px;
+	color:black; /*texto en blanco*/
+	cursor:pointer;
+}
+h2{
+	font-family:"Helvetica";
+	text-align: center;
+
+}
+#ver,#modificar,#registrar,#eliminar{
+	border-radius:5px;
+	height:5em;
+	margin-left: .5em;
+	padding:.7em;
+	width:10em;
+}
+ 
+
+input [type="text"]{
+	background-image:url("img/login.png");
+	border-radius:5px;
+	height: 10px;
+}
+span {
+	color:red;
+}
+textarea /*Concepto*/
+{
+	width: 17em;
+	resize: none;
+	height: 9em;
+}
+ 
+#clientes{/*welcome tabla*/
+	
+	margin: 0em auto;
+	width: 300px;
+}
+ 
+#formulario {/*index formulacio*/
+	margin:0 auto;
+	width:500px;
+	padding:25px;
+}
+#modajax{
+	width: 7em;
+	height:2em;
+}
+#resultado{
+	 
+	 margin: 0em auto;
+	 min-height:100px; 
+	text-align: center;
+	width: 50em;
+}
+ 
+.contenedor {/*index principal  */
+	 
+	margin:0em auto;
+	width:800px;
+	text-align: center;
+}
+.contenido{/*welcom principal*/
+	margin: 0em auto;
+	text-align: center;
+}
+.cerrar{
+	margin-right: -730px;
+}
+.wusuario{
+ 	font-family:"Helvetica"; 
+	margin-right:-800px;/*para mover bienvenido: usuario a la derecha*/
+}
+ 
+ 
